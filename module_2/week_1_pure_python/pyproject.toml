@@ -1,0 +1,20 @@
+[project]
+name = "week-1-pure-python"
+version = "0.1.0"
+description = "N-gram Language Models — pure Python, no NLP libraries"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "pandas>=3.0.0",
+    "requests>=2.32.0",
+]
+
+[project.scripts]
+ngram-lm = "ngram_lm.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ngram_lm"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
